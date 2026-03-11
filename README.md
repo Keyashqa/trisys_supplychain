@@ -91,7 +91,7 @@ The system combines **deterministic Pandas queries** (for factual grounding) wit
 ## Project Structure
 
 ```
-claude-test/
+trisys_supplychain/
 ├── .gitignore
 ├── README.md
 ├── input.md                    # Sample questions / test inputs
