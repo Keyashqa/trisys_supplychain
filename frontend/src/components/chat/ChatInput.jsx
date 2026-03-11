@@ -25,9 +25,9 @@ export default function ChatInput({ onSubmit }) {
   }
 
   return (
-    <div className="border-t border-gray-800 p-4">
+    <div className="border-t border-ts-border p-4 bg-ts-surface">
       {uploadStatus !== 'ready' && (
-        <p className="text-xs text-gray-600 mb-2 text-center">Upload a CSV file to start asking questions</p>
+        <p className="text-xs text-ts-muted mb-2 text-center">Upload a CSV file to start asking questions</p>
       )}
       <div className="flex gap-3 items-end">
         <textarea
@@ -38,13 +38,13 @@ export default function ChatInput({ onSubmit }) {
           disabled={disabled}
           rows={1}
           placeholder={disabled && uploadStatus !== 'ready' ? 'Upload a CSV first...' : 'Ask about your supply chain data...'}
-          className="flex-1 bg-gray-900 border border-gray-700 rounded-xl px-4 py-2.5 text-sm text-white placeholder-gray-600 resize-none focus:outline-none focus:border-gray-500 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex-1 bg-ts-bg border border-ts-border rounded-xl px-4 py-2.5 text-sm text-ts-navy placeholder-ts-muted resize-none focus:outline-none focus:border-ts-blue disabled:opacity-50 disabled:cursor-not-allowed"
           style={{ minHeight: 44, maxHeight: 120 }}
         />
         <button
           onClick={submit}
           disabled={disabled || !value.trim()}
-          className="px-4 py-2.5 bg-blue-600 hover:bg-blue-500 disabled:bg-gray-800 disabled:text-gray-600 text-white rounded-xl text-sm font-medium transition-colors"
+          className="px-4 py-2.5 bg-ts-blue hover:bg-ts-blue-d disabled:bg-ts-panel disabled:text-ts-muted text-white rounded-xl text-sm font-medium transition-colors"
         >
           Send
         </button>

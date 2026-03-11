@@ -9,7 +9,7 @@ export default function UploadProgress({ status }) {
         <div
           key={step}
           className={`flex items-center gap-1 text-[10px] px-2 py-1 rounded-full
-            ${i < stepIndex ? 'bg-green-900 text-green-300' : i === stepIndex ? 'bg-blue-900 text-blue-300 animate-pulse' : 'bg-gray-800 text-gray-500'}`}
+            ${i < stepIndex ? 'bg-ts-green/20 text-ts-green-d' : i === stepIndex ? 'bg-ts-blue/10 text-ts-blue animate-pulse' : 'bg-ts-panel text-ts-muted'}`}
         >
           <span className="shrink-0">{i < stepIndex ? '✓' : i + 1}</span>
           <span className="truncate">{step}</span>

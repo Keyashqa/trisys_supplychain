@@ -24,22 +24,22 @@ export default function DropZone() {
     <div
       {...getRootProps()}
       className={`border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-colors
-        ${isDragActive ? 'border-blue-500 bg-blue-950/30' : 'border-gray-700 hover:border-gray-500'}
+        ${isDragActive ? 'border-ts-blue bg-ts-blue/10' : 'border-ts-border hover:border-ts-blue'}
         ${isUploading ? 'pointer-events-none opacity-60' : ''}`}
     >
       <input {...getInputProps()} />
       {isUploading ? (
         <div className="flex flex-col items-center gap-3">
           <Spinner size="lg" />
-          <p className="text-gray-400 text-sm">Processing CSV...</p>
+          <p className="text-ts-muted text-sm">Processing CSV...</p>
         </div>
       ) : (
         <div className="flex flex-col items-center gap-2">
           <div className="text-4xl">📦</div>
-          <p className="text-gray-300 font-medium">
+          <p className="text-ts-navy font-medium">
             {isDragActive ? 'Drop it here' : 'Drag & drop a CSV file'}
           </p>
-          <p className="text-gray-500 text-sm">or click to browse</p>
+          <p className="text-ts-muted text-sm">or click to browse</p>
         </div>
       )}
     </div>

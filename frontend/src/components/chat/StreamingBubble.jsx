@@ -12,16 +12,16 @@ export default function StreamingBubble() {
     <div className="flex flex-col">
       <AgentTracker />
       <div className="mx-4 mb-2">
-        <div className="bg-gray-900 border border-gray-800 rounded-2xl rounded-tl-sm px-4 py-3 max-w-2xl">
+        <div className="bg-ts-surface border border-ts-border rounded-2xl rounded-tl-sm px-4 py-3 max-w-2xl">
           {streamingText ? (
-            <p className="text-gray-200 text-sm whitespace-pre-wrap">
+            <p className="text-ts-navy text-sm whitespace-pre-wrap">
               {streamingText}
-              <span className="inline-block w-0.5 h-4 bg-blue-400 ml-0.5 animate-pulse align-text-bottom" />
+              <span className="inline-block w-0.5 h-4 bg-ts-blue ml-0.5 animate-pulse align-text-bottom" />
             </p>
           ) : (
             <div className="flex items-center gap-2">
               <Spinner size="sm" />
-              <span className="text-gray-500 text-sm">Thinking...</span>
+              <span className="text-ts-muted text-sm">Thinking...</span>
             </div>
           )}
         </div>

@@ -11,7 +11,7 @@ export default function FollowUpChips({ onSubmit }) {
         <button
           key={q}
           onClick={() => onSubmit(q)}
-          className="text-xs px-3 py-1.5 bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-gray-200 rounded-full border border-gray-700 transition-colors"
+          className="text-xs px-3 py-1.5 bg-ts-panel hover:bg-ts-border text-ts-muted hover:text-ts-navy rounded-full border border-ts-border transition-colors"
         >
           {q}
         </button>

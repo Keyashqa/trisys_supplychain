@@ -1,6 +1,6 @@
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from 'recharts'
 
-const COLORS = { on_time: '#22c55e', minor: '#eab308', critical: '#ef4444' }
+const COLORS = { on_time: '#ABCF45', minor: '#eab308', critical: '#ef4444' }
 
 export default function SeverityPieChart({ data }) {
   const chartData = [
@@ -10,8 +10,8 @@ export default function SeverityPieChart({ data }) {
   ].filter(d => d.value > 0)
 
   return (
-    <div className="bg-gray-900 border border-gray-800 rounded-xl p-4">
-      <h3 className="text-sm font-semibold text-gray-300 mb-4">Delay Severity Breakdown</h3>
+    <div className="bg-ts-surface border border-ts-border rounded-xl p-4">
+      <h3 className="text-sm font-semibold text-black mb-4">Delay Severity Breakdown</h3>
       <ResponsiveContainer width="100%" height={220}>
         <PieChart>
           <Pie data={chartData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80} label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}>
@@ -20,8 +20,8 @@ export default function SeverityPieChart({ data }) {
             ))}
           </Pie>
           <Tooltip
-            contentStyle={{ backgroundColor: '#111827', border: '1px solid #374151', borderRadius: 8 }}
-            itemStyle={{ color: '#9ca3af' }}
+            contentStyle={{ backgroundColor: '#FFFFFF', border: '1px solid #C8DDE3', borderRadius: 8 }}
+            itemStyle={{ color: '#3a6070' }}
           />
         </PieChart>
       </ResponsiveContainer>

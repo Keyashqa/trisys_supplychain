@@ -8,7 +8,7 @@ export default function Layout({ children }) {
   const setActiveTab = useCopilotStore(s => s.setActiveTab)
 
   return (
-    <div className="flex h-screen bg-gray-950 text-white overflow-hidden">
+    <div className="flex h-screen bg-ts-bg text-ts-navy overflow-hidden">
       <Sidebar />
       <div className="flex-1 flex flex-col min-w-0">
         <TopBar activeTab={activeTab} setActiveTab={setActiveTab} />

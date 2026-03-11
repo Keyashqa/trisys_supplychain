@@ -5,14 +5,14 @@ export default function TopBar({ activeTab, setActiveTab }) {
   const uploadStatus = useCopilotStore(s => s.uploadStatus)
 
   return (
-    <div className="h-14 border-b border-gray-800 flex items-center justify-between px-6 bg-gray-950">
+    <div className="h-14 border-b border-ts-border flex items-center justify-between px-6 bg-ts-surface">
       <div className="flex gap-1">
         {['dashboard', 'chat'].map(tab => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
             className={`px-4 py-1.5 rounded-lg text-sm font-medium capitalize transition-colors
-              ${activeTab === tab ? 'bg-gray-800 text-white' : 'text-gray-500 hover:text-gray-300'}`}
+              ${activeTab === tab ? 'bg-ts-panel text-ts-navy' : 'text-ts-muted hover:text-ts-navy'}`}
           >
             {tab === 'dashboard' ? '📊 Dashboard' : '💬 Chat'}
           </button>
@@ -20,11 +20,11 @@ export default function TopBar({ activeTab, setActiveTab }) {
       </div>
       <div className="flex items-center gap-3 text-sm">
         {uploadStatus === 'ready' && summary && (
-          <span className="text-gray-400">
-            <span className="text-green-400 font-mono">{summary.total_rows.toLocaleString()}</span> rows loaded
+          <span className="text-ts-muted">
+            <span className="text-ts-blue font-mono font-semibold">{summary.total_rows.toLocaleString()}</span> rows loaded
           </span>
         )}
-        <div className={`w-2 h-2 rounded-full ${uploadStatus === 'ready' ? 'bg-green-400' : uploadStatus === 'uploading' ? 'bg-yellow-400 animate-pulse' : 'bg-gray-600'}`} />
+        <div className={`w-2 h-2 rounded-full ${uploadStatus === 'ready' ? 'bg-ts-green' : uploadStatus === 'uploading' ? 'bg-amber-400 animate-pulse' : 'bg-ts-muted'}`} />
       </div>
     </div>
   )

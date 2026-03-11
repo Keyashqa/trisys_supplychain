@@ -13,28 +13,28 @@ export default function ProductRankTable({ data }) {
   }
 
   return (
-    <div className="bg-gray-900 border border-gray-800 rounded-xl p-4">
-      <h3 className="text-sm font-semibold text-gray-300 mb-4">Product Rankings (Top 10)</h3>
+    <div className="bg-ts-surface border border-ts-border rounded-xl p-4">
+      <h3 className="text-sm font-semibold text-black mb-4">Product Rankings (Top 10)</h3>
       <table className="w-full text-sm">
         <thead>
-          <tr className="text-gray-500 text-xs uppercase">
+          <tr className="text-ts-muted text-xs uppercase">
             <th className="text-left pb-2">Product</th>
-            <th className="text-right pb-2 cursor-pointer hover:text-gray-300" onClick={() => toggle('avg_delay')}>
+            <th className="text-right pb-2 cursor-pointer hover:text-ts-navy" onClick={() => toggle('avg_delay')}>
               Avg Delay {sortKey === 'avg_delay' ? (asc ? '↑' : '↓') : ''}
             </th>
-            <th className="text-right pb-2 cursor-pointer hover:text-gray-300" onClick={() => toggle('avg_processing_time')}>
+            <th className="text-right pb-2 cursor-pointer hover:text-ts-navy" onClick={() => toggle('avg_processing_time')}>
               Proc. Time {sortKey === 'avg_processing_time' ? (asc ? '↑' : '↓') : ''}
             </th>
           </tr>
         </thead>
         <tbody>
           {top10.map((row) => (
-            <tr key={row.Product_ID} className="border-t border-gray-800">
-              <td className="py-1.5 text-gray-300 font-mono text-xs">{row.Product_ID}</td>
-              <td className={`py-1.5 text-right font-mono text-xs ${row.avg_delay > 3 ? 'text-red-400' : row.avg_delay > 0 ? 'text-yellow-400' : 'text-green-400'}`}>
+            <tr key={row.Product_ID} className="border-t border-ts-border">
+              <td className="py-1.5 text-ts-navy font-mono text-xs">{row.Product_ID}</td>
+              <td className={`py-1.5 text-right font-mono text-xs ${row.avg_delay > 3 ? 'text-red-500' : row.avg_delay > 0 ? 'text-amber-500' : 'text-ts-green-d'}`}>
                 {row.avg_delay?.toFixed(2)}d
               </td>
-              <td className="py-1.5 text-right font-mono text-xs text-gray-400">
+              <td className="py-1.5 text-right font-mono text-xs text-ts-muted">
                 {row.avg_processing_time?.toFixed(2)}d
               </td>
             </tr>
