@@ -1,4 +1,4 @@
-# Supply Chain AI Copilot
+# triSys Supply Chain AI Assistant
 
 A neuro-symbolic multi-agent Q&A system for supply chain analytics. Upload a CSV of order/shipment data, ask natural language questions, and receive evidence-based answers with visualizations — powered by Google ADK agents, Pandas, and Pinecone.
 
